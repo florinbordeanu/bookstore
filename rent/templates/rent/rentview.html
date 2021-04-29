@@ -1,0 +1,39 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block title %}Rent history{% endblock %}
+
+{% block content %}
+
+<table class="table table-bordered border-primary">
+
+    <thead>
+        <th>ID</th>
+        <th>Date</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Book</th>
+        <th>Rent period</th>
+        <th>Total price</th>
+    </thead>
+    <tbody>
+    {% for r in rent %}
+        <tr class="first-table-row">
+            <td>{{ r.id }}</td>
+            <td>{{ r.rent_date }}</td>
+            <td>{{ r.last_name }}</td>
+            <td>{{ r.first_name }}</td>
+            <td>{{ r.address }}</td>
+            <td>{{ r.phone }}</td>
+            <td>{{ r.email }}</td>
+            <td>{{ r.book }}</td>
+            <td>{{ r.rent_period }}</td>
+            <td>{{ r.total_price }}</td>
+        </tr>
+    </tbody>
+    {% endfor %}
+    </table>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+
+.container-fluid {
+    background-color: darkblue;
+}
+
+#sale {
+    color: black;
+    background-color: khaki;
+}
+
+.card {
+    block-size: 420px;
+}
+
+#text-colors {
+    color: aliceblue;
+
+}
+
+#user {
+    background-color: firebrick;
+}
+
+#user_dropdown {
+    background-color: firebrick;
+}
+
+#menu_color {
+    background-color: khaki;
+}
+
+
+#signin {
+    background-color: green;
+}
+
+.btn-outline-warning {
+    color: black;
+}
+
+#bg{
+    background-size: 1800px 900px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+}
+

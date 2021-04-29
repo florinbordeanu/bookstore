@@ -1,0 +1,21 @@
+{% extends "store/base.html" %}
+{% load static %}
+
+{% block content %}
+<body id="bg" style="background-image: url(https://images.unsplash.com/photo-1516979187457-637abb4f9353?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzN8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);background-size:100%">
+
+
+    {% if searched %}
+        <h1>You Searched For {{ searched }} </h1>
+        <br/>
+        {% for book in books %}
+            <a href="{% url 'store:product_detail' book.slug %}">{{ book }} - {{ book.author }}</a> <br/>
+        {% endfor %}
+     {% else %}
+        <h1>Please Search For a Book...</h1>
+    {% endif %}
+
+</body>
+
+
+{% endblock %}

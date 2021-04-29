@@ -1,0 +1,36 @@
+
+{% extends 'store/base.html' %}
+{% load static %}
+{% block title %}Sales history{% endblock %}
+
+{% block content %}
+
+<table class="table table-bordered border-primary">
+
+    <thead>
+        <th>ID</th>
+        <th>User</th>
+        <th>Created</th>
+        <th>Surname</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Order</th>
+        <th>Total Value</th>
+    </thead>
+    <tbody>
+    {% for order in orders %}
+        <tr class="first-table-row">
+            <td>{{ order.id }}</td>
+            <td>{{ order.user }}</td>
+            <td>{{ order.created_on }}</td>
+            <td>{{ order.user.first_name }}</td>
+            <td>{{ order.user.last_name }}</td>
+            <td>{{ order.user.email }}</td>
+            <td>{{ order.items }}</td>
+            <td>{{ order.order_value }}</td>
+        </tr>
+    </tbody>
+    {% endfor %}
+    </table>
+
+{% endblock %}

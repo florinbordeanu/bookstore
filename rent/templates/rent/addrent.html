@@ -1,0 +1,28 @@
+{% extends 'store/base.html' %}
+{% load crispy_forms_filters %}
+
+
+{% block content %}
+
+<body id="bg" style="background-image: url(https://images.unsplash.com/photo-1516979187457-637abb4f9353?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzN8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);background-size:100%;">
+</body>
+<h2>The price for renting a book is 2.00 Ron per day</h2>
+    {% load crispy_forms_tags %}
+    <form action="" method="post" class="form-row">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <br>
+        <input type="submit" value="Rent book">
+    </form>
+<br>
+{% if messages%}
+    <div class="alert alert-success" role="alert">
+        {% for message in messages %}
+
+        {{ message }}
+        {% endfor %}
+    </div>
+
+{% endif %}
+
+{% endblock %}

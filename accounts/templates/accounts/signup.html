@@ -1,0 +1,18 @@
+{% extends 'store/base.html' %}
+{% load crispy_forms_filters %}
+
+
+{% block content %}
+<body id="bg" style="background-image: url(https://images.unsplash.com/photo-1516979187457-637abb4f9353?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzN8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);background-size:100%">
+
+    {% load crispy_forms_tags %}
+    <form action="" method="post" class="container">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <br>
+        <input id="signin" type="submit" value="Sign in">
+    </form>
+</body>
+
+{% endblock %}
+
